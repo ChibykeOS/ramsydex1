@@ -119,11 +119,6 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
                 Logistics • Freight • Customs • QC
               </span>
             </div>
-
-            {/* 32 Years Highlight Badge */}
-            <div className="hidden xl:flex items-center bg-dhl-black text-white px-2.5 py-1 rounded ml-3 text-xs font-bold shadow-sm border border-zinc-800">
-              <span className="text-dhl-yellow mr-1 font-black">32+</span> Years of Excellence
-            </div>
           </div>
 
           {/* Desktop Nav Links */}
@@ -181,11 +176,8 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
         {/* Mobile Navigation Dropdown */}
         {mobileMenuOpen && (
           <div className="lg:hidden bg-zinc-900 text-white border-t border-zinc-800 px-4 pt-3 pb-6 mt-3 animate-in slide-in-from-top duration-200">
-            <div className="flex items-center justify-between pb-3 mb-3 border-b border-zinc-800 text-xs">
+            <div className="pb-3 mb-3 border-b border-zinc-800 text-xs">
               <span className="text-zinc-400">Hub: Shah Alam, Central Malaysia</span>
-              <span className="bg-dhl-yellow text-dhl-black px-2 py-0.5 rounded font-extrabold text-[10px]">
-                32+ Years Exp
-              </span>
             </div>
 
             <div className="flex flex-col gap-1">
