@@ -138,8 +138,8 @@ export default function Hero({ onExploreSolutions, onRequestQuote }) {
               <span>Licensed Royal Malaysian Customs Broker & Multi-Modal Haulier</span>
             </div>
 
-            {/* Exact 2-Line Headline from Developer Brief */}
-            <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black tracking-tight leading-tight uppercase font-heading text-white drop-shadow-md">
+            {/* Exact Headline from Developer Brief */}
+            <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-snug uppercase font-heading text-white drop-shadow-md">
               Connecting Global Markets with Reliable Supply Chain & Distribution Solutions{' '}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-dhl-yellow via-yellow-300 to-amber-300">
                 from Central Malaysia.
