@@ -131,13 +131,6 @@ export default function Hero({ onExploreSolutions, onRequestQuote }) {
           
           {/* Left Column: Bold Headline & Narrative - Column 1 to 7 */}
           <div className="lg:col-span-7 flex flex-col items-start space-y-5">
-            
-            {/* Tagline Badge */}
-            <div className="inline-flex items-center gap-2 bg-dhl-red text-white text-[11px] font-black uppercase tracking-widest px-3 py-1 rounded shadow-md">
-              <ShieldCheck className="w-3.5 h-3.5 text-dhl-yellow" />
-              <span>Licensed Royal Malaysian Customs Broker & Multi-Modal Haulier</span>
-            </div>
-
             {/* Exact Headline from Developer Brief */}
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-snug uppercase font-heading text-white drop-shadow-md">
               Connecting Global Markets with Reliable Supply Chain & Distribution Solutions{' '}
