@@ -175,18 +175,18 @@ export default function Hero({ onExploreSolutions, onRequestQuote }) {
               </button>
             </div>
 
-            {/* Visual Micro-Badges */}
-            <div className="pt-3 flex flex-wrap items-center gap-y-2 gap-x-5 text-xs text-zinc-300">
-              <div className="flex items-center gap-1.5 bg-black/50 px-2.5 py-1 rounded border border-white/10">
-                <Clock className="w-4 h-4 text-dhl-yellow" />
+            {/* Visual Micro-Badges in a Single Line */}
+            <div className="pt-3 flex items-center gap-2 sm:gap-2.5 text-[11px] sm:text-xs text-zinc-300 whitespace-nowrap overflow-x-auto sm:overflow-visible pb-1 sm:pb-0">
+              <div className="flex items-center gap-1.5 bg-black/50 px-2.5 py-1 rounded border border-white/10 flex-shrink-0">
+                <Clock className="w-3.5 h-3.5 text-dhl-yellow flex-shrink-0" />
                 <span>Guaranteed 24h Response SLA</span>
               </div>
-              <div className="flex items-center gap-1.5 bg-black/50 px-2.5 py-1 rounded border border-white/10">
-                <PackageCheck className="w-4 h-4 text-dhl-yellow" />
+              <div className="flex items-center gap-1.5 bg-black/50 px-2.5 py-1 rounded border border-white/10 flex-shrink-0">
+                <PackageCheck className="w-3.5 h-3.5 text-dhl-yellow flex-shrink-0" />
                 <span>100% SKU / Barcode QC Audits</span>
               </div>
-              <div className="flex items-center gap-1.5 bg-black/50 px-2.5 py-1 rounded border border-white/10">
-                <MapPin className="w-4 h-4 text-dhl-yellow" />
+              <div className="flex items-center gap-1.5 bg-black/50 px-2.5 py-1 rounded border border-white/10 flex-shrink-0">
+                <MapPin className="w-3.5 h-3.5 text-dhl-yellow flex-shrink-0" />
                 <span>25m to Port Klang • 35m to KLIA</span>
               </div>
             </div>
