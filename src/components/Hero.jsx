@@ -86,46 +86,6 @@ export default function Hero({ onExploreSolutions, onRequestQuote }) {
       {/* Main Container */}
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 pt-10 sm:pt-14 pb-8 sm:pb-12">
         
-        {/* Top Operational Status Pill & Background Scene Switcher */}
-        <div className="flex flex-wrap items-center justify-between gap-3 mb-6 pb-4 border-b border-white/10">
-          
-          {/* Status Badge */}
-          <div className="inline-flex items-center gap-2.5 bg-black/60 border border-dhl-yellow/40 rounded-full px-3.5 py-1.5 backdrop-blur-md text-xs font-semibold">
-            <span className="relative flex h-2.5 w-2.5">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
-            </span>
-            <span className="text-zinc-200">
-              Central Malaysia Operational Hub • <strong className="text-dhl-yellow">32+ Years Established (1992)</strong>
-            </span>
-          </div>
-
-          {/* Background Scene Selector Pills */}
-          <div className="flex items-center gap-1.5 bg-black/70 p-1 rounded-lg border border-white/15 backdrop-blur-md text-xs">
-            <span className="text-[11px] font-bold text-zinc-400 px-2 hidden sm:inline">Hub View:</span>
-            {heroBackgrounds.map((bg, idx) => {
-              const Icon = bg.icon;
-              const isActive = activeBgIndex === idx;
-              return (
-                <button
-                  key={bg.id}
-                  onClick={() => setActiveBgIndex(idx)}
-                  className={`flex items-center gap-1.5 px-2.5 py-1 rounded text-xs font-bold transition-all ${
-                    isActive 
-                      ? 'bg-dhl-yellow text-dhl-black shadow' 
-                      : 'text-zinc-300 hover:text-white hover:bg-white/10'
-                  }`}
-                  title={bg.caption}
-                >
-                  <Icon className="w-3.5 h-3.5" />
-                  <span className="hidden md:inline">{bg.label.split(' ')[0]}</span>
-                </button>
-              );
-            })}
-          </div>
-
-        </div>
-
         {/* 2-Column Hero Layout */}
         <div className="grid lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           
