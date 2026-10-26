@@ -23,7 +23,7 @@ export default function ComparisonTable({ onRequestQuote }) {
       {/* Page Header */}
       <div className="text-center max-w-3xl mx-auto">
         <div className="inline-flex items-center gap-1.5 bg-dhl-yellow text-dhl-black font-black text-xs px-3 py-1 rounded uppercase tracking-wider mb-2">
-          <span>Page 2: Core Solutions & Operational Capabilities</span>
+          <span>Core Solutions & Operational Capabilities</span>
         </div>
         <h2 className="text-3xl sm:text-4xl font-black text-dhl-black font-heading uppercase tracking-tight">
           Standard Transport vs. Ramsydex Value-Added

@@ -88,7 +88,7 @@ export default function App() {
                   <div className="lg:col-span-7 space-y-4">
                     <div className="inline-flex items-center gap-2 bg-dhl-red text-white text-xs font-black uppercase tracking-widest px-3 py-1 rounded">
                       <Globe className="w-3.5 h-3.5" />
-                      <span>Global Network & World Map Teaser</span>
+                      <span>Global Network & Trade Lanes</span>
                     </div>
 
                     <h2 className="text-2xl sm:text-4xl font-black uppercase font-heading text-white leading-tight">
