@@ -67,14 +67,11 @@ export default function App() {
            ======================================================== */}
         {activePage === 'home' && (
           <div className="animate-in fade-in duration-300">
-            {/* Hero Section */}
+            {/* Hero Section with Integrated Background Switcher & Stats */}
             <Hero 
               onExploreSolutions={handleExploreSolutions}
               onRequestQuote={() => handleRequestQuote('Freight Quote')}
             />
-
-            {/* Trust Numbers Bar (4-stat bar across page) */}
-            <TrustBar />
 
             {/* Solutions Grid (DSV Style 6 modular cards) */}
             <SolutionsGrid 
