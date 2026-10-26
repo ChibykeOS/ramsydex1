@@ -6,9 +6,6 @@ import {
   Menu, 
   X, 
   ChevronRight, 
-  Clock, 
-  ShieldCheck, 
-  MapPin, 
   FileText 
 } from 'lucide-react';
 import { companyInfo } from '../data/logisticsData';
@@ -42,50 +39,6 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
 
   return (
     <header className="sticky top-0 z-50 w-full transition-all duration-200">
-      {/* Top Bar - Logistics Operating Status & Dispatch Contact */}
-      <div className="bg-dhl-black text-white text-xs py-2 px-4 border-b border-zinc-800">
-        <div className="max-w-7xl mx-auto flex flex-wrap justify-between items-center gap-2">
-          <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1.5 font-semibold text-dhl-yellow">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
-              </span>
-              Central Malaysia Operational Desk Active
-            </span>
-            <span className="hidden md:inline-block text-zinc-500">|</span>
-            <span className="hidden md:flex items-center gap-1 text-zinc-300">
-              <Clock className="w-3.5 h-3.5 text-dhl-yellow" />
-              SLA Promise: 24h Inquiry Response
-            </span>
-            <span className="hidden lg:inline-block text-zinc-500">|</span>
-            <span className="hidden lg:flex items-center gap-1 text-zinc-300">
-              <ShieldCheck className="w-3.5 h-3.5 text-dhl-yellow" />
-              Licensed Customs Broker & FIATA Member
-            </span>
-          </div>
-
-          <div className="flex items-center gap-4 text-xs ml-auto">
-            <a 
-              href={`tel:${companyInfo.phone}`} 
-              className="flex items-center gap-1 text-zinc-300 hover:text-dhl-yellow transition-colors font-medium"
-            >
-              <Phone className="w-3.5 h-3.5 text-dhl-yellow" />
-              <span className="hidden sm:inline">Dispatch:</span> {companyInfo.phoneDisplay}
-            </a>
-            <a
-              href={`https://wa.me/${companyInfo.whatsappNumber}?text=${encodeURIComponent(companyInfo.whatsappMessage)}`}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-1 text-emerald-400 hover:text-emerald-300 font-semibold transition-colors"
-            >
-              <MessageCircle className="w-3.5 h-3.5" />
-              <span>WhatsApp</span>
-            </a>
-          </div>
-        </div>
-      </div>
-
       {/* Main Navigation Bar */}
       <nav className={`w-full transition-all duration-200 ${
         isScrolled 
