@@ -126,10 +126,10 @@ export default function QuoteForm({ initialTopic = 'Freight Quote', onOpenLegal 
         </p>
       </div>
 
-      <div className="grid lg:grid-cols-12 gap-8 items-start">
+      <div className="grid lg:grid-cols-12 gap-8 items-stretch">
         
-        {/* Left Side: Topic Selector & Form - Column 1 to 7 */}
-        <div className="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-8 border-2 border-gray-200 shadow-xl">
+        {/* Left Side: Topic Selector & Form - Column 1 to 7 (Card 1) */}
+        <div className="lg:col-span-7 bg-white rounded-2xl p-6 sm:p-8 border-2 border-gray-200 shadow-xl flex flex-col justify-between">
           
           {/* Topic Selector Buttons (Sample: Maersk) */}
           <div className="mb-6">
@@ -389,82 +389,86 @@ export default function QuoteForm({ initialTopic = 'Freight Quote', onOpenLegal 
 
         </div>
 
-        {/* Right Side: Central Malaysia Hub Details & Response Promise - Column 8 to 12 */}
-        <div className="lg:col-span-5 space-y-6">
+        {/* Right Side: Central Malaysia Hub Details & Response Promise - Column 8 to 12 (Cards 2 & 3) */}
+        <div className="lg:col-span-5 flex flex-col justify-between gap-6 h-full">
           
-          {/* Response Time Promise Box (Sample: Maersk) */}
-          <div className="bg-dhl-yellow text-dhl-black rounded-2xl p-6 sm:p-7 border-4 border-dhl-red shadow-lg relative overflow-hidden">
+          {/* Response Time Promise Box (Sample: Maersk) - Card 2 */}
+          <div className="bg-dhl-yellow text-dhl-black rounded-2xl p-6 sm:p-7 border-4 border-dhl-red shadow-lg relative overflow-hidden flex flex-col justify-between">
             <div className="flex items-start gap-4">
               <div className="p-3 bg-dhl-red text-white rounded-xl flex-shrink-0 shadow-sm">
                 <Clock className="w-7 h-7 stroke-[2.5]" />
               </div>
-              <div>
+              <div className="space-y-1">
                 <span className="text-[10px] font-black uppercase tracking-widest bg-dhl-black text-white px-2 py-0.5 rounded">
                   Maersk-Style SLA Guarantee
                 </span>
-                <h4 className="text-lg font-black uppercase font-heading mt-1.5 leading-tight text-dhl-black">
+                <h4 className="text-lg font-black uppercase font-heading mt-1 leading-tight text-dhl-black">
                   Response Time Commitment
                 </h4>
-                <p className="text-xs sm:text-sm font-semibold mt-1 text-zinc-900 leading-relaxed">
+                <p className="text-xs sm:text-sm font-semibold text-zinc-900 leading-relaxed pt-0.5">
                   "{companyInfo.responsePromise}"
                 </p>
-                <div className="mt-2 text-[11px] font-bold text-zinc-800">
-                  Business Hours: {companyInfo.operatingHours}
-                </div>
               </div>
+            </div>
+
+            <div className="mt-3 pt-3 border-t border-dhl-black/15 flex flex-wrap items-center justify-between gap-2 text-[11px] font-bold text-zinc-900">
+              <span className="uppercase text-[10px] tracking-wider text-zinc-800">Operational Desk Hours:</span>
+              <span className="bg-black/10 px-2 py-0.5 rounded">{companyInfo.operatingHours}</span>
             </div>
           </div>
 
-          {/* Central Malaysia Hub Details Card */}
-          <div className="bg-dhl-black text-white rounded-2xl p-6 sm:p-7 border-2 border-zinc-800 shadow-xl space-y-5">
-            <div className="flex items-center gap-3 pb-3 border-b border-zinc-800">
-              <div className="p-2.5 bg-dhl-yellow text-dhl-black rounded-lg">
-                <MapPin className="w-6 h-6 stroke-[2.5]" />
+          {/* Central Malaysia Hub Details Card - Card 3 */}
+          <div className="bg-dhl-black text-white rounded-2xl p-6 sm:p-7 border-2 border-zinc-800 shadow-xl flex-1 flex flex-col justify-between">
+            <div>
+              <div className="flex items-center gap-3 pb-3.5 border-b border-zinc-800">
+                <div className="p-2.5 bg-dhl-yellow text-dhl-black rounded-lg">
+                  <MapPin className="w-6 h-6 stroke-[2.5]" />
+                </div>
+                <div>
+                  <h4 className="text-base font-black uppercase font-heading text-white">
+                    Central Malaysia Operational Hub
+                  </h4>
+                  <p className="text-xs text-zinc-400">Headquarters, Cross-Dock & QC Bays</p>
+                </div>
               </div>
-              <div>
-                <h4 className="text-base font-black uppercase font-heading text-white">
-                  Central Malaysia Operational Hub
-                </h4>
-                <p className="text-xs text-zinc-400">Headquarters, Cross-Dock & QC Bays</p>
+
+              <div className="space-y-4 text-xs mt-4">
+                <div className="flex items-start gap-3">
+                  <Building className="w-4 h-4 text-dhl-yellow flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-bold text-white block">Physical Facility Address:</span>
+                    <span className="text-zinc-300 leading-relaxed">{companyInfo.address}</span>
+                    <span className="block text-[11px] text-dhl-yellow mt-0.5">{companyInfo.hubLocationSummary}</span>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Phone className="w-4 h-4 text-dhl-yellow flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-bold text-white block">Direct Desk & Hotline:</span>
+                    <a href={`tel:${companyInfo.phone}`} className="text-zinc-200 hover:text-dhl-yellow">
+                      {companyInfo.phoneDisplay} (General)
+                    </a>
+                    <span className="block text-zinc-400">
+                      Hotline: {companyInfo.dispatchHotline}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex items-start gap-3">
+                  <Mail className="w-4 h-4 text-dhl-yellow flex-shrink-0 mt-0.5" />
+                  <div>
+                    <span className="font-bold text-white block">Official Dispatch Email:</span>
+                    <a href={`mailto:${companyInfo.dispatchEmail}`} className="text-zinc-200 hover:text-dhl-yellow">
+                      {companyInfo.dispatchEmail}
+                    </a>
+                  </div>
+                </div>
               </div>
             </div>
 
-            <div className="space-y-4 text-xs">
-              <div className="flex items-start gap-3">
-                <Building className="w-4 h-4 text-dhl-yellow flex-shrink-0 mt-0.5" />
-                <div>
-                  <span className="font-bold text-white block">Physical Facility Address:</span>
-                  <span className="text-zinc-300 leading-relaxed">{companyInfo.address}</span>
-                  <span className="block text-[11px] text-dhl-yellow mt-0.5">{companyInfo.hubLocationSummary}</span>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <Phone className="w-4 h-4 text-dhl-yellow flex-shrink-0 mt-0.5" />
-                <div>
-                  <span className="font-bold text-white block">Direct Desk & Hotline:</span>
-                  <a href={`tel:${companyInfo.phone}`} className="text-zinc-200 hover:text-dhl-yellow">
-                    {companyInfo.phoneDisplay} (General)
-                  </a>
-                  <span className="block text-zinc-400">
-                    Hotline: {companyInfo.dispatchHotline}
-                  </span>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-3">
-                <Mail className="w-4 h-4 text-dhl-yellow flex-shrink-0 mt-0.5" />
-                <div>
-                  <span className="font-bold text-white block">Official Dispatch Email:</span>
-                  <a href={`mailto:${companyInfo.dispatchEmail}`} className="text-zinc-200 hover:text-dhl-yellow">
-                    {companyInfo.dispatchEmail}
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            {/* Direct WhatsApp Callout Button */}
-            <div className="pt-2 border-t border-zinc-800">
+            {/* Direct WhatsApp Callout Button Pinned at Bottom */}
+            <div className="pt-4 border-t border-zinc-800 mt-5">
               <a
                 href={`https://wa.me/${companyInfo.whatsappNumber}?text=${encodeURIComponent(companyInfo.whatsappMessage)}`}
                 target="_blank"
