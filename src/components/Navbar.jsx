@@ -68,8 +68,8 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
                   GLOBAL
                 </span>
               </div>
-              <span className="text-[10px] sm:text-[11px] font-bold text-zinc-900 tracking-wider uppercase -mt-0.5">
-                Logistics • Freight • Customs • QC
+              <span className="text-[10px] sm:text-[11px] font-black text-zinc-900 tracking-wider uppercase -mt-0.5">
+                <span className="text-dhl-red font-black">32 Years</span> of Experience
               </span>
             </div>
           </div>
