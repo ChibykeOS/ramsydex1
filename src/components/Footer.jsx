@@ -66,7 +66,7 @@ export default function Footer({ setActivePage, onOpenLegal }) {
                 href={`https://wa.me/${companyInfo.whatsappNumber}?text=${encodeURIComponent(companyInfo.whatsappMessage)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-3.5 py-2 rounded-lg transition-colors"
+                className="inline-flex items-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white text-xs font-bold px-4 py-2 rounded-full transition-colors"
               >
                 <MessageCircle className="w-3.5 h-3.5" />
                 <span>WhatsApp Dispatch Desk</span>

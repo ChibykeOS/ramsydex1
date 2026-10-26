@@ -52,7 +52,7 @@ export default function ComparisonTable({ onRequestQuote }) {
 
           <button
             onClick={onRequestQuote}
-            className="bg-dhl-yellow hover:bg-yellow-400 text-dhl-black font-extrabold text-xs uppercase tracking-wider px-6 py-3 rounded shadow transition-colors flex items-center gap-2 self-start md:self-auto"
+            className="bg-dhl-yellow hover:bg-yellow-400 text-dhl-black font-extrabold text-xs uppercase tracking-wider px-6 py-3 rounded-full shadow transition-colors flex items-center gap-2 self-start md:self-auto"
           >
             <span>Request Detailed Pricing</span>
             <ArrowRight className="w-4 h-4" />
@@ -130,7 +130,7 @@ export default function ComparisonTable({ onRequestQuote }) {
 
             <button
               onClick={onRequestQuote}
-              className="bg-dhl-red hover:bg-dhl-red-hover text-white text-xs font-extrabold uppercase tracking-wider px-6 py-3 rounded shadow transition-colors flex items-center gap-2 self-start md:self-auto"
+              className="bg-dhl-red hover:bg-dhl-red-hover text-white text-xs font-extrabold uppercase tracking-wider px-6 py-3 rounded-full shadow transition-colors flex items-center gap-2 self-start md:self-auto"
             >
               <span>Book QC Audit</span>
               <ArrowRight className="w-4 h-4" />

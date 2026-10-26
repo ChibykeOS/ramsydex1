@@ -82,7 +82,7 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
                 <button
                   key={item.id}
                   onClick={() => handleNavClick(item.id)}
-                  className={`px-3.5 py-2 text-sm font-bold tracking-tight rounded transition-all duration-150 relative ${
+                  className={`px-3.5 py-2 text-sm font-bold tracking-tight rounded-full transition-all duration-150 relative ${
                     isActive 
                       ? 'text-white bg-dhl-red shadow-sm' 
                       : 'text-dhl-black hover:bg-black/10'
@@ -90,7 +90,7 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
                 >
                   {item.label}
                   {isActive && (
-                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-dhl-yellow rounded-full"></span>
+                    <span className="absolute bottom-1 left-1/2 -translate-x-1/2 w-4 h-0.5 bg-dhl-yellow rounded-full"></span>
                   )}
                 </button>
               );
@@ -108,7 +108,7 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
                   handleNavClick('contact');
                 }
               }}
-              className="relative overflow-hidden group bg-dhl-red hover:bg-dhl-red-hover text-white text-xs sm:text-sm font-black px-4 sm:px-5 py-2.5 rounded shadow-md hover:shadow-brand transition-all duration-200 flex items-center gap-1.5 uppercase tracking-wider"
+              className="relative overflow-hidden group bg-dhl-red hover:bg-dhl-red-hover text-white text-xs sm:text-sm font-black px-5 sm:px-6 py-2.5 rounded-full shadow-md hover:shadow-brand transition-all duration-200 flex items-center gap-1.5 uppercase tracking-wider"
             >
               <FileText className="w-4 h-4 text-dhl-yellow" />
               <span>Request a Quote</span>
@@ -140,7 +140,7 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
                   <button
                     key={item.id}
                     onClick={() => handleNavClick(item.id)}
-                    className={`flex items-center justify-between text-left px-3 py-2.5 rounded text-sm font-bold tracking-wide ${
+                    className={`flex items-center justify-between text-left px-4 py-2.5 rounded-full text-sm font-bold tracking-wide ${
                       isActive 
                         ? 'bg-dhl-red text-white' 
                         : 'text-zinc-200 hover:bg-zinc-800'
@@ -156,7 +156,7 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
             <div className="mt-4 pt-4 border-t border-zinc-800 flex flex-col gap-2.5">
               <a
                 href={`tel:${companyInfo.phone}`}
-                className="flex items-center justify-center gap-2 bg-zinc-800 text-white font-bold py-2.5 rounded text-sm"
+                className="flex items-center justify-center gap-2 bg-zinc-800 text-white font-bold py-2.5 rounded-full text-sm"
               >
                 <Phone className="w-4 h-4 text-dhl-yellow" />
                 <span>Call Dispatch: {companyInfo.phoneDisplay}</span>
@@ -165,7 +165,7 @@ export default function Navbar({ activePage, setActivePage, openQuoteModal }) {
                 href={`https://wa.me/${companyInfo.whatsappNumber}?text=${encodeURIComponent(companyInfo.whatsappMessage)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded text-sm"
+                className="flex items-center justify-center gap-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-full text-sm"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Direct WhatsApp Consultation</span>

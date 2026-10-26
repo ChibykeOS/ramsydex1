@@ -114,7 +114,7 @@ export default function App() {
                     <div className="pt-4">
                       <button
                         onClick={handleViewGlobalNetwork}
-                        className="bg-dhl-yellow hover:bg-yellow-400 text-dhl-black font-black text-xs sm:text-sm uppercase tracking-wider px-6 sm:px-8 py-3.5 rounded shadow-lg transition-transform hover:scale-105 flex items-center gap-2"
+                        className="bg-dhl-yellow hover:bg-yellow-400 text-dhl-black font-black text-xs sm:text-sm uppercase tracking-wider px-7 sm:px-8 py-3.5 rounded-full shadow-lg transition-transform hover:scale-105 flex items-center gap-2"
                       >
                         <span>View Global Network & Focus Countries</span>
                         <ArrowRight className="w-4 h-4" />
@@ -177,14 +177,14 @@ export default function App() {
                 <div className="flex items-center gap-3">
                   <button
                     onClick={() => handleRequestQuote('Freight Quote')}
-                    className="bg-dhl-red hover:bg-dhl-red-hover text-white font-black text-xs sm:text-sm uppercase tracking-wider px-6 py-3.5 rounded shadow-md transition-colors flex items-center gap-2"
+                    className="bg-dhl-red hover:bg-dhl-red-hover text-white font-black text-xs sm:text-sm uppercase tracking-wider px-6 py-3.5 rounded-full shadow-md transition-colors flex items-center gap-2"
                   >
                     <span>Request a Quote</span>
                     <ArrowRight className="w-4 h-4" />
                   </button>
                   <a
                     href={`tel:${companyInfo.phone}`}
-                    className="bg-dhl-black hover:bg-zinc-800 text-white font-bold text-xs sm:text-sm uppercase tracking-wider px-5 py-3.5 rounded transition-colors flex items-center gap-2"
+                    className="bg-dhl-black hover:bg-zinc-800 text-white font-bold text-xs sm:text-sm uppercase tracking-wider px-5 py-3.5 rounded-full transition-colors flex items-center gap-2"
                   >
                     <PhoneCall className="w-4 h-4 text-dhl-yellow" />
                     <span className="hidden sm:inline">Call Hub</span>
@@ -217,7 +217,7 @@ export default function App() {
               </p>
               <button
                 onClick={() => handleRequestQuote('Freight Quote')}
-                className="mt-6 bg-dhl-red hover:bg-dhl-red-hover text-white font-black text-sm uppercase tracking-wider px-8 py-4 rounded-lg shadow-brand transition-transform hover:scale-105 flex items-center gap-2"
+                className="mt-6 bg-dhl-red hover:bg-dhl-red-hover text-white font-black text-sm uppercase tracking-wider px-8 py-4 rounded-full shadow-brand transition-transform hover:scale-105 flex items-center gap-2"
               >
                 <span>Request a Quote Today</span>
                 <ArrowRight className="w-4 h-4 text-dhl-yellow" />
@@ -245,7 +245,7 @@ export default function App() {
               </p>
               <button
                 onClick={() => handleRequestQuote('Freight Quote')}
-                className="mt-5 bg-dhl-red hover:bg-dhl-red-hover text-white font-black text-xs uppercase tracking-wider px-6 py-3.5 rounded-lg shadow transition-colors inline-flex items-center gap-2"
+                className="mt-5 bg-dhl-red hover:bg-dhl-red-hover text-white font-black text-xs uppercase tracking-wider px-6 py-3.5 rounded-full shadow transition-colors inline-flex items-center gap-2"
               >
                 <span>Inquire About Your Specific Route</span>
                 <ArrowRight className="w-4 h-4 text-dhl-yellow" />
@@ -273,7 +273,7 @@ export default function App() {
               </p>
               <button
                 onClick={() => handleRequestQuote('General Inquiry')}
-                className="mt-6 bg-dhl-yellow hover:bg-yellow-400 text-dhl-black font-black text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded shadow-lg transition-transform hover:scale-105 flex items-center gap-2"
+                className="mt-6 bg-dhl-yellow hover:bg-yellow-400 text-dhl-black font-black text-xs sm:text-sm uppercase tracking-wider px-8 py-4 rounded-full shadow-lg transition-transform hover:scale-105 flex items-center gap-2"
               >
                 <span>Initiate Corporate Consultation</span>
                 <ArrowRight className="w-4 h-4" />

@@ -202,7 +202,7 @@ export default function InteractiveMap({ onRequestQuote }) {
                 </div>
                 <button
                   onClick={onRequestQuote}
-                  className="bg-dhl-red hover:bg-dhl-red-hover text-white text-xs font-black uppercase tracking-wider px-4 py-2.5 rounded shadow transition-colors flex items-center gap-1.5"
+                  className="bg-dhl-red hover:bg-dhl-red-hover text-white text-xs font-black uppercase tracking-wider px-5 py-2.5 rounded-full shadow transition-colors flex items-center gap-1.5"
                 >
                   <span>Book Lane</span>
                   <ArrowRight className="w-3.5 h-3.5" />

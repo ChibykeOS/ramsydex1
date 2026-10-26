@@ -41,7 +41,7 @@ export default function CookieBanner({ onOpenPrivacy }) {
         <div className="flex items-center gap-2.5 flex-shrink-0">
           <button
             onClick={acceptCookies}
-            className="bg-dhl-red hover:bg-dhl-red-hover text-white font-extrabold uppercase tracking-wider px-5 py-2 rounded text-xs transition-colors shadow"
+            className="bg-dhl-red hover:bg-dhl-red-hover text-white font-extrabold uppercase tracking-wider px-6 py-2 rounded-full text-xs transition-colors shadow"
           >
             Accept & Proceed
           </button>

@@ -159,7 +159,7 @@ export default function SolutionsGrid({ onSelectService, onNavigateToCapabilitie
 
             <button
               onClick={() => onSelectService('General Inquiry')}
-              className="bg-dhl-yellow hover:bg-yellow-400 text-dhl-black font-black text-sm uppercase tracking-wider px-8 py-4 rounded shadow-lg transition-transform hover:scale-105 flex items-center gap-2 flex-shrink-0"
+              className="bg-dhl-yellow hover:bg-yellow-400 text-dhl-black font-black text-sm uppercase tracking-wider px-8 py-4 rounded-full shadow-lg transition-transform hover:scale-105 flex items-center gap-2 flex-shrink-0"
             >
               <span>Request Custom Proposal</span>
               <ArrowRight className="w-4 h-4" />

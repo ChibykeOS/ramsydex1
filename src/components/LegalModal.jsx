@@ -140,7 +140,7 @@ export default function LegalModal({ type, onClose }) {
         <div className="p-4 bg-gray-50 border-t border-gray-200 flex justify-end">
           <button
             onClick={onClose}
-            className="bg-dhl-red hover:bg-dhl-red-hover text-white text-xs font-bold uppercase tracking-wider px-6 py-2.5 rounded shadow transition-colors"
+            className="bg-dhl-red hover:bg-dhl-red-hover text-white text-xs font-bold uppercase tracking-wider px-6 py-2.5 rounded-full shadow transition-colors"
           >
             Close Notice
           </button>

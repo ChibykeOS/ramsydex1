@@ -111,7 +111,7 @@ export default function Hero({ onExploreSolutions, onRequestQuote }) {
               {/* Primary CTA (DHL Red) */}
               <button
                 onClick={onRequestQuote}
-                className="group bg-dhl-red hover:bg-dhl-red-hover text-white font-extrabold text-sm sm:text-base px-7 py-4 rounded shadow-brand transition-all duration-200 flex items-center justify-center gap-2.5 uppercase tracking-wider"
+                className="group bg-dhl-red hover:bg-dhl-red-hover text-white font-extrabold text-sm sm:text-base px-7 py-4 rounded-full shadow-brand transition-all duration-200 flex items-center justify-center gap-2.5 uppercase tracking-wider"
               >
                 <FileText className="w-5 h-5 text-dhl-yellow" />
                 <span>Request a Quote</span>
@@ -121,7 +121,7 @@ export default function Hero({ onExploreSolutions, onRequestQuote }) {
               {/* Secondary CTA (DHL Yellow) */}
               <button
                 onClick={onExploreSolutions}
-                className="group bg-dhl-yellow hover:bg-yellow-400 text-dhl-black font-extrabold text-sm sm:text-base px-7 py-4 rounded shadow transition-all duration-200 flex items-center justify-center gap-2 uppercase tracking-wider"
+                className="group bg-dhl-yellow hover:bg-yellow-400 text-dhl-black font-extrabold text-sm sm:text-base px-7 py-4 rounded-full shadow transition-all duration-200 flex items-center justify-center gap-2 uppercase tracking-wider"
               >
                 <span>Explore Solutions</span>
                 <ChevronRight className="w-4 h-4 transition-transform group-hover:translate-x-1" />
@@ -243,7 +243,7 @@ export default function Hero({ onExploreSolutions, onRequestQuote }) {
                 <div className="pt-2">
                   <button
                     type="submit"
-                    className="w-full bg-dhl-yellow hover:bg-yellow-400 text-dhl-black font-black uppercase tracking-wider py-3 px-4 rounded-lg flex items-center justify-center gap-2 transition-transform hover:scale-[1.02] shadow-md text-xs"
+                    className="w-full bg-dhl-yellow hover:bg-yellow-400 text-dhl-black font-black uppercase tracking-wider py-3.5 px-4 rounded-full flex items-center justify-center gap-2 transition-transform hover:scale-[1.02] shadow-md text-xs"
                   >
                     <span>Calculate Rates & Transit Schedule</span>
                     <ArrowRight className="w-4 h-4" />

@@ -144,7 +144,7 @@ export default function QuoteForm({ initialTopic = 'Freight Quote', onOpenLegal 
                     key={pill.id}
                     type="button"
                     onClick={() => handleTopicClick(pill.id)}
-                    className={`text-xs font-extrabold px-3.5 py-2 rounded-lg transition-all duration-150 flex items-center gap-1.5 ${
+                    className={`text-xs font-extrabold px-4 py-2 rounded-full transition-all duration-150 flex items-center gap-1.5 ${
                       isSelected
                         ? 'bg-dhl-red text-white shadow-md scale-105'
                         : 'bg-gray-100 text-gray-700 hover:bg-gray-200 border border-gray-200'
@@ -191,7 +191,7 @@ export default function QuoteForm({ initialTopic = 'Freight Quote', onOpenLegal 
                   href={`https://wa.me/${companyInfo.whatsappNumber}?text=${encodeURIComponent(`Hello Ramsydex, I just submitted an inquiry for ${formData.serviceNeeded} (Ref: ${formData.company}). Could you confirm receipt?`)}`}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs uppercase tracking-wider px-6 py-3.5 rounded-lg flex items-center justify-center gap-2 shadow-md"
+                  className="w-full sm:w-auto bg-emerald-600 hover:bg-emerald-700 text-white font-black text-xs uppercase tracking-wider px-6 py-3.5 rounded-full flex items-center justify-center gap-2 shadow-md"
                 >
                   <MessageCircle className="w-4 h-4" />
                   <span>Notify Desk on WhatsApp</span>
@@ -199,7 +199,7 @@ export default function QuoteForm({ initialTopic = 'Freight Quote', onOpenLegal 
 
                 <button
                   onClick={handleReset}
-                  className="w-full sm:w-auto bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-lg flex items-center justify-center gap-1.5"
+                  className="w-full sm:w-auto bg-gray-100 hover:bg-gray-200 text-gray-800 font-bold text-xs uppercase tracking-wider px-6 py-3.5 rounded-full flex items-center justify-center gap-1.5"
                 >
                   <RotateCcw className="w-4 h-4" />
                   <span>Submit Another Request</span>
@@ -368,7 +368,7 @@ export default function QuoteForm({ initialTopic = 'Freight Quote', onOpenLegal 
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full bg-dhl-red hover:bg-dhl-red-hover text-white font-black text-sm uppercase tracking-wider py-4 rounded-lg shadow-brand transition-all flex items-center justify-center gap-2 group disabled:opacity-75"
+                  className="w-full bg-dhl-red hover:bg-dhl-red-hover text-white font-black text-sm uppercase tracking-wider py-4 rounded-full shadow-brand transition-all flex items-center justify-center gap-2 group disabled:opacity-75"
                 >
                   {isSubmitting ? (
                     <span className="flex items-center gap-2">
@@ -473,7 +473,7 @@ export default function QuoteForm({ initialTopic = 'Freight Quote', onOpenLegal 
                 href={`https://wa.me/${companyInfo.whatsappNumber}?text=${encodeURIComponent(companyInfo.whatsappMessage)}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs uppercase tracking-wider py-3.5 px-4 rounded-lg flex items-center justify-center gap-2 shadow transition-colors"
+                className="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs uppercase tracking-wider py-3.5 px-4 rounded-full flex items-center justify-center gap-2 shadow transition-colors"
               >
                 <MessageCircle className="w-4 h-4" />
                 <span>Chat Direct with Duty Coordinator</span>
@@ -500,7 +500,7 @@ export default function QuoteForm({ initialTopic = 'Freight Quote', onOpenLegal 
                 <h3 className="font-black uppercase font-heading text-white text-sm sm:text-base">
                   Central Malaysia Operational Hub & Headquarters
                 </h3>
-                <span className="bg-dhl-yellow text-dhl-black text-[10px] font-black uppercase px-2 py-0.5 rounded">
+                <span className="bg-dhl-yellow text-dhl-black text-[10px] font-black uppercase px-2 py-0.5 rounded-full">
                   Live Map
                 </span>
               </div>
@@ -515,7 +515,7 @@ export default function QuoteForm({ initialTopic = 'Freight Quote', onOpenLegal 
               href="https://www.google.com/maps/dir/?api=1&destination=Jalan+Utas+15/7+Seksyen+15+Shah+Alam+Selangor+Malaysia"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-dhl-red hover:bg-dhl-red-hover text-white font-extrabold text-xs uppercase tracking-wider px-4 py-2.5 rounded flex items-center gap-1.5 shadow transition-colors"
+              className="bg-dhl-red hover:bg-dhl-red-hover text-white font-extrabold text-xs uppercase tracking-wider px-4 py-2.5 rounded-full flex items-center gap-1.5 shadow transition-colors"
             >
               <Navigation className="w-3.5 h-3.5" />
               <span>Get Directions</span>
@@ -524,7 +524,7 @@ export default function QuoteForm({ initialTopic = 'Freight Quote', onOpenLegal 
               href="https://maps.google.com/?q=Jalan+Utas+15/7+Seksyen+15+40200+Shah+Alam+Selangor+Malaysia"
               target="_blank"
               rel="noopener noreferrer"
-              className="bg-dhl-yellow hover:bg-yellow-400 text-dhl-black font-black text-xs uppercase tracking-wider px-4 py-2.5 rounded flex items-center gap-1.5 shadow transition-colors"
+              className="bg-dhl-yellow hover:bg-yellow-400 text-dhl-black font-black text-xs uppercase tracking-wider px-4 py-2.5 rounded-full flex items-center gap-1.5 shadow transition-colors"
             >
               <span>Full Google Map</span>
               <ExternalLink className="w-3.5 h-3.5" />
