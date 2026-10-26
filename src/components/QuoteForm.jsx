@@ -11,7 +11,9 @@ import {
   AlertCircle,
   Truck,
   Building,
-  RotateCcw
+  RotateCcw,
+  ExternalLink,
+  Navigation
 } from 'lucide-react';
 import { companyInfo, topicPills } from '../data/logisticsData';
 
@@ -476,29 +478,66 @@ export default function QuoteForm({ initialTopic = 'Freight Quote', onOpenLegal 
 
           </div>
 
-          {/* Embedded Google Map Stylized Representation */}
-          <div className="rounded-2xl overflow-hidden border-2 border-gray-200 shadow-md bg-zinc-900 aspect-video relative flex items-center justify-center">
-            {/* Map Frame Graphic */}
-            <div className="absolute inset-0 opacity-40 bg-[radial-gradient(#333_1px,transparent_1px)] [background-size:16px_16px]"></div>
-            <div className="relative text-center p-4">
-              <div className="w-10 h-10 bg-dhl-red rounded-full flex items-center justify-center text-white mx-auto mb-2 animate-bounce">
-                <MapPin className="w-5 h-5 stroke-[2.5]" />
+          {/* Interactive Google Map of Company Headquarters & Hub */}
+          <div className="bg-white rounded-2xl overflow-hidden border-2 border-gray-200 shadow-xl flex flex-col">
+            
+            {/* Map Card Header */}
+            <div className="p-4 bg-dhl-black text-white flex items-center justify-between border-b-2 border-dhl-yellow text-xs">
+              <div className="flex items-center gap-2.5">
+                <div className="p-1.5 bg-dhl-red text-white rounded">
+                  <MapPin className="w-4 h-4 stroke-[2.5]" />
+                </div>
+                <div>
+                  <h4 className="font-extrabold uppercase font-heading text-white text-xs">
+                    Ramsydex Central Malaysia Hub Map
+                  </h4>
+                  <p className="text-[10px] text-zinc-400">Seksyen 15 Industrial Zone, Shah Alam</p>
+                </div>
               </div>
-              <span className="font-black text-xs uppercase text-white tracking-wider block">
-                Shah Alam Seksyen 15 Hub
-              </span>
-              <span className="text-[11px] text-zinc-400 block mt-0.5">
-                Latitude 3.0583° N, Longitude 101.5283° E
-              </span>
+
               <a
-                href="https://maps.google.com/?q=Shah+Alam+Industrial+Zone+Selangor+Malaysia"
+                href="https://maps.google.com/?q=Jalan+Utas+15/7+Seksyen+15+40200+Shah+Alam+Selangor+Malaysia"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block mt-2 text-[10px] bg-dhl-yellow text-dhl-black font-extrabold px-3 py-1 rounded uppercase tracking-wider hover:bg-yellow-400"
+                className="bg-dhl-yellow hover:bg-yellow-400 text-dhl-black font-black text-[10px] uppercase tracking-wider px-3 py-1.5 rounded flex items-center gap-1.5 shadow transition-colors"
               >
-                Open in Google Maps
+                <span>Google Maps</span>
+                <ExternalLink className="w-3 h-3" />
               </a>
             </div>
+
+            {/* Live Google Map Interactive Embed */}
+            <div className="relative w-full h-[320px] bg-zinc-900">
+              <iframe
+                title="RAMSYDEX GLOBAL LOGISTICS Hub Location on Google Maps"
+                src="https://maps.google.com/maps?q=Jalan+Utas+15/7+Seksyen+15+Shah+Alam+Selangor+Malaysia&t=&z=14&ie=UTF8&iwloc=&output=embed"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="w-full h-full"
+              ></iframe>
+            </div>
+
+            {/* Map Card Footer with Quick Navigation Coordinates */}
+            <div className="p-3.5 bg-gray-50 border-t border-gray-200 text-xs flex flex-wrap items-center justify-between gap-2">
+              <div className="flex items-center gap-1.5 text-gray-700 text-[11px] font-semibold">
+                <Navigation className="w-3.5 h-3.5 text-dhl-red flex-shrink-0" />
+                <span>3.0583° N, 101.5283° E (Federal / KESAS Highway Access)</span>
+              </div>
+              <a
+                href="https://www.google.com/maps/dir/?api=1&destination=Jalan+Utas+15/7+Seksyen+15+Shah+Alam+Selangor+Malaysia"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-dhl-red hover:underline font-extrabold text-[11px] uppercase tracking-wide flex items-center gap-1"
+              >
+                <span>Get Directions</span>
+                <ExternalLink className="w-3 h-3" />
+              </a>
+            </div>
+
           </div>
 
         </div>
